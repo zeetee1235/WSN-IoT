@@ -1,0 +1,3 @@
+[workspace]
+members = ["logstats"]
+resolver = "2"

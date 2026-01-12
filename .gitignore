@@ -1,0 +1,62 @@
+# Python
+.venv/
+venv/
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+*.egg-info/
+dist/
+build/
+*.egg
+
+# Rust
+target/
+Cargo.lock
+**/*.rs.bk
+*.pdb
+
+# Logs
+logs/*.log
+logs/*.txt
+!logs/.gitkeep
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.DS_Store
+
+# Contiki-NG build artifacts
+*.cooja
+*.map
+*.a
+*.o
+*.d
+*.elf
+*.hex
+*.bin
+symbols.c
+symbols.h
+
+# Simulation files (선택적 - 시뮬레이션 설정 파일을 보관하려면 주석 처리)
+# *.csc
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Temporary files
+*.tmp
+*.bak
+*.swp
+*~
+
+# Java/Gradle (Cooja 관련)
+.gradle/
+*.class
+*.jar
+!gradle/wrapper/gradle-wrapper.jar
