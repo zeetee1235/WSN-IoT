@@ -50,6 +50,11 @@ cd WSN-IoT
 git submodule update --init --recursive
 ```
 
+또는 자동화 스크립트 사용:
+```bash
+./scripts/update_submodules.sh
+```
+
 ### 1. 환경 확인
 
 ```bash
