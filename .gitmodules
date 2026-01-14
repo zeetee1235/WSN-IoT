@@ -1,0 +1,3 @@
+[submodule "rpl-benchmark"]
+	path = rpl-benchmark
+	url = https://github.com/zeetee1235/RPL-benchmark.git
