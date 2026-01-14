@@ -8,6 +8,11 @@ Fedora 42 기반 Contiki-NG + Cooja 시뮬레이션 환경
 WSN-IoT/
 ├── external/
 │   └── contiki-ng -> ~/contiki-ng    # Contiki-NG 심볼릭 링크
+├── rpl-benchmark/                     # RPL 벤치마크 (서브모듈)
+│   ├── receiver_root.c                # RPL root + UDP 수신기
+│   ├── sender.c                       # UDP 센서 송신기
+│   ├── brpl-of.c                      # BRPL objective function
+│   └── run_experiment.sh              # 실험 실행 스크립트
 ├── scripts/                           # 자동화 스크립트
 │   ├── bootstrap.sh                   # 환경 체크
 │   ├── build_examples.sh              # 예제 빌드
@@ -32,6 +37,18 @@ WSN-IoT/
 - ✅ Rust 1.92
 
 ## 사용법
+
+### 0. 저장소 클론 (서브모듈 포함)
+
+```bash
+git clone --recurse-submodules https://github.com/zeetee1235/WSN-IoT.git
+cd WSN-IoT
+```
+
+기존 클론에 서브모듈 초기화:
+```bash
+git submodule update --init --recursive
+```
 
 ### 1. 환경 확인
 
@@ -112,6 +129,28 @@ cargo build --release
 ```
 
 실행 파일: `tools/rust/target/release/logstats`
+
+## RPL 벤치마크 (서브모듈)
+
+`rpl-benchmark/` 디렉토리는 별도의 저장소로 관리됩니다.
+- Repository: https://github.com/zeetee1235/RPL-benchmark.git
+
+### RPL 벤치마크 사용법
+
+```bash
+cd rpl-benchmark
+
+# RPL-lite 모드로 3개 센서 실험
+./run_experiment.sh rpl-lite 3
+
+# BRPL 모드로 5개 센서 실험
+./run_experiment.sh brpl 5
+
+# 로그 확인
+ls -lht logs/
+```
+
+자세한 사용법은 `rpl-benchmark/readme.md` 참고
 
 ## 문제 해결
 
