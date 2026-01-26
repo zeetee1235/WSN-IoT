@@ -1,3 +1,6 @@
 [submodule "rpl-benchmark"]
 	path = rpl-benchmark
 	url = https://github.com/zeetee1235/RPL-benchmark.git
+[submodule "trust-aware-brpl"]
+	path = trust-aware-brpl
+	url = https://github.com/zeetee1235/trust-aware-brpl.git
